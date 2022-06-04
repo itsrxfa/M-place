@@ -1,0 +1,61 @@
+{
+  "name": "place-replica",
+  "version": "1.0.0",
+  "description": "Replica of r/place",
+  "author": {
+    "name": "Vik",
+    "email": "vik120@icloud.com",
+    "url": "https://github.com/vikr01"
+  },
+  "contributors": [
+    {
+      "name": "Suraj Setty",
+      "url": "https://github.com/surajsetty97"
+    },
+    {
+      "name": "Alex Nguyen",
+      "url": "https://github.com/alexandernguyen1"
+    },
+    {
+      "name": "Zan Javed",
+      "url": "https://github.com/zjaved101"
+    }
+  ],
+  "engines": {
+    "node": "8.11",
+    "npm": "~6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./webpack/webpack.config.js --mode development --progress --colors --watch",
+    "webpack": "webpack --config ./webpack/webpack.config.js --mode development --json > ./webpack/webpack-compilation-stats.json --progress --colors",
+    "heroku-postbuild": "webpack -p --config ./webpack/webpack.config.js --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikr01/place-replica.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikr01/place-replica/issues"
+  },
+  "homepage": "https://github.com/vikr01/place-replica#readme",
+  "dependencies": {
+    "firebase": "^4.13.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.7.0",
+    "webpack-bundle-tracker": "^0.3.0",
+    "webpack-cli": "^2.1.2"
+  }
+}
